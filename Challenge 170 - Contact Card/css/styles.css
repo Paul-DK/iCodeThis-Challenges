@@ -78,7 +78,7 @@ body {
   padding-left: 0.8rem;
   margin-bottom: 2rem;
   background-color: white;
-  width: fit-content;
+  width: max-content;
   border-radius: 500px;
   display: flex;
   align-items: center;
@@ -97,6 +97,7 @@ body {
 .card-lower .button {
   display: block;
   position: relative;
+  width: max-content;
   font-weight: 300;
   margin-block: 1rem;
   padding-inline: 1.5rem;
