@@ -52,7 +52,7 @@ body {
 }
 
 .card-lower h2 {
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
@@ -68,9 +68,9 @@ body {
 }
 
 .card-lower .status {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   margin-inline: auto;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   padding-block: 0.2rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
