@@ -86,7 +86,8 @@ body {
   width: 10px;
   height: 10px;
   margin-right: 1rem;
-  background-color: rgb(142, 219, 62);
+  /* background-color: rgb(142, 219, 62); */
+  background-color: rgb(219, 62, 62);
   border-radius: 50%;
 }
 
