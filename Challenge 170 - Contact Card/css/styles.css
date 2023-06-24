@@ -73,7 +73,7 @@ body {
   font-size: 0.7rem;
   padding-block: 0.2rem;
   padding-right: 0.8rem;
-  padding-left: 1.3rem;
+  padding-left: 0.8rem;
   background-color: white;
   width: fit-content;
   border-radius: 500px;
@@ -85,7 +85,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  margin-right: 0.2rem;
+  margin-right: 1rem;
   background-color: rgb(142, 219, 62);
   border-radius: 50%;
 }
