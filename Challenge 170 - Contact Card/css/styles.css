@@ -84,10 +84,8 @@ body {
   content: "";
   width: 10px;
   height: 10px;
+  margin-right: 0.2rem;
   background-color: rgb(142, 219, 62);
-  position: absolute;
-  top: 7px;
-  left: 7px;
   border-radius: 50%;
 }
 
