@@ -100,6 +100,7 @@ body {
   width: max-content;
   font-weight: 300;
   margin-block: 1rem;
+  margin-inline: auto;
   padding-inline: 1.5rem;
   padding-block: 1rem;
   background-image: linear-gradient(to bottom right, rgba(94, 160, 254, 1) 10%, rgba(148, 107, 229, 1) 90%);
@@ -130,5 +131,5 @@ body {
 
 .card-lower .button:hover {
   scale: 1.02;
-  transform: translateY(-.3rem);
+  transform: translateY(-0.3rem);
 }
