@@ -77,7 +77,8 @@ body {
   background-color: white;
   width: fit-content;
   border-radius: 500px;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .card-lower .status::before {
