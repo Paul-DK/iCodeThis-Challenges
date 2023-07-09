@@ -1,3 +1,20 @@
+:root {
+  --card-section-corners: 5px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.background {
+  background-image: url("/img/pizzaovenbg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  width: 100dvw;
+}
+
 .blur {
   display: flex;
   justify-content: center;
@@ -8,11 +25,117 @@
   backdrop-filter: blur(50px) saturate(70%);
 }
 
-.background {
-  background-image: url("/img/pizzaovenbg.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100dvh;
-  width: 100dvw;
+.card {
+  position: relative;
+  width: 400px;
+}
+
+.card .card-header {
+  background-color: rgb(202, 52, 50);
+  height: 90px;
+  border-top-left-radius: var(--card-section-corners);
+  border-top-right-radius: var(--card-section-corners);
+}
+
+.card .card-content {
+  background-color: white;
+}
+
+.card .card-branding {
+  position: absolute;
+  width: 100%;
+  top: calc(90px - 3rem);
+}
+
+.card .card-branding p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.card .card-branding .vendor-name {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.card .card-branding img {
+  height: 6rem;
+  width: 6rem;
+  border: 0.4rem solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.card .card-content .cart {
+  padding: 9rem 2rem 2rem;
+}
+
+.card .card-content .item-management {
+  padding: 0 2rem 2rem;
+}
+
+.card .card-content .item-management .button {
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  background-color: antiquewhite;
+  margin: 2px 0;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: var(--card-section-corners);
+}
+
+.item-management {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-management .two-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-management .two-cols .half {
+  width: 49.5%;
+}
+
+.card .charge-checkout {
+  background-color: white;
+  border-bottom-left-radius: var(--card-section-corners);
+  border-bottom-right-radius: var(--card-section-corners);
+}
+
+.card .charge-checkout {
+  padding: 0 2rem;
+}
+
+.card .charge-checkout .charge-summary {
+  padding: 1.5rem;
+  background-color: rgb(254, 230, 230);
+  border-radius: var(--card-section-corners);
+}
+
+.card .charge-checkout .charge-summary ul {
+  list-style: none;
+}
+
+.card .charge-checkout .charge-summary li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .charge-checkout .charge-summary li span {
+  font-weight: 700;
+}
+
+.charge-checkout > button {
+  font-weight: 700;
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  border-radius: var(--card-section-corners);
+  border: none;
+  background-color: rgb(202, 52, 50);
+  color: white;
 }

@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,300;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Order Summary</title>
@@ -12,20 +18,41 @@
       <div class="blur">
         <div class="card">
           <div class="card-header">
-            <img src="" alt="Pizza Express Logo" />
-            <p>Your order from</p>
-            <p class="vendor-name">Pizza Hut</p>
+            <div class="card-branding">
+              <img src="/img/pizzahutlogo.png" alt="Pizza Express Logo" />
+              <p>Your order from</p>
+              <p class="vendor-name">Pizza Hut</p>
+            </div>
           </div>
           <div class="card-content">
-            <div class="cart"></div>
+            <div class="cart">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis soluta earum at error eius distinctio tempora placeat
+                accusantium, illo cum assumenda debitis repellat fugiat rem
+                expedita. Facere officiis sunt unde rerum esse, magnam quisquam
+                corrupti accusantium saepe quod facilis fugiat doloribus illo
+                ipsam quas nemo cum in eius est odit!
+              </p>
+            </div>
             <div class="item-management">
-              <div class="button add-pizza"></div>
-              <div class="button add-beverage"></div>
-              <div class="button add-extras"></div>
+              <button class="button full">Add Pizza</button>
+              <button class="button full">Customize Toppings</button>
+              <div class="two-cols">
+                <button class="button half">Add Beverage</button>
+                <button class="button half">Add Extras</button>
+              </div>
             </div>
-            <div class="charge-checkout">
-              <button></button>
+          </div>
+          <div class="charge-checkout">
+            <div class="charge-summary">
+              <ul>
+                <li><span>Subtotal</span><span>$15.98</span></li>
+                <li><span>Shipping</span><span>$2.00</span></li>
+                <li><span>Total (VAT inc)</span><span>$17.98</span></li>
+              </ul>
             </div>
+            <button class="button full accent">Feed Me</button>
           </div>
         </div>
       </div>
