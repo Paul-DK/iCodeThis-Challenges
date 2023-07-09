@@ -86,6 +86,11 @@ body {
   border-radius: var(--card-section-corners);
 }
 
+button img {
+  height: 1rem;
+  width: 1rem;
+}
+
 .item-management {
   display: flex;
   flex-direction: column;
