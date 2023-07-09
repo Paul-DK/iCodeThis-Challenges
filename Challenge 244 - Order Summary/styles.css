@@ -1,0 +1,26 @@
+.blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.background {
+  background-image: url("/img/pizzaovenbg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px) saturate(70%);
+}
