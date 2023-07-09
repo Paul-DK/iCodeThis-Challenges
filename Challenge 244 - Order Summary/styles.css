@@ -4,6 +4,8 @@
   align-items: center;
   width: 100dvw;
   height: 100dvh;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px) saturate(70%);
 }
 
 .background {
@@ -13,14 +15,4 @@
   background-size: cover;
   height: 100dvh;
   width: 100dvw;
-}
-
-.blur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100dvw;
-  height: 100dvh;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(50px) saturate(70%);
 }
