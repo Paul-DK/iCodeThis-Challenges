@@ -147,3 +147,9 @@ button img {
   background-color: rgb(202, 52, 50);
   color: white;
 }
+.charge-checkout > button img {
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
