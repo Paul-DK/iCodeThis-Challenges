@@ -29,7 +29,7 @@ body {
 .card {
   position: relative;
   width: 400px;
-  margin: 2rem auto;
+  margin: 2rem 0;
 }
 
 .card .card-header {
@@ -57,7 +57,7 @@ body {
 .card .card-branding .vendor-name {
   text-align: center;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .card .card-branding img {
