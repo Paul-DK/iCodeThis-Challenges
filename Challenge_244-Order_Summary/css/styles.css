@@ -89,7 +89,7 @@ body {
   border-radius: var(--card-section-corners);
 }
 
-button svg {
+button img {
   display: inline;
   vertical-align: middle;
   height: 1.4rem;
