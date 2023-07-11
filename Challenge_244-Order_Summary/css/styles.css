@@ -59,6 +59,7 @@ body {
   text-align: center;
   font-size: 1.4rem;
   font-weight: 900;
+  line-height: 0.5;
 }
 
 .card .card-branding img {
@@ -70,7 +71,7 @@ body {
 }
 
 .card .card-content .cart {
-  padding: 9rem 2rem 2rem;
+  padding: 8rem 2rem 2rem;
 }
 
 .card .card-content .item-management {
@@ -85,11 +86,10 @@ body {
   background-color: white;
   margin: 2px 0;
   border: 1px solid lightgray;
-  background-color: white;
   border-radius: var(--card-section-corners);
 }
 
-button img {
+button svg {
   display: inline;
   vertical-align: middle;
   height: 1.4rem;
@@ -146,13 +146,24 @@ button img {
   padding: 0.5rem 0;
   width: 100%;
   border-radius: var(--card-section-corners);
-  border: none;
-  background-color: rgb(202, 52, 50);
-  color: white;
+  border: 3px solid rgb(202, 52, 50);
+  background-color: white;
+  color: rgb(202, 52, 50);
 }
 .charge-checkout > button img {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+/* Button Hover Styles */
+
+.card .card-content .item-management .button:hover {
+  color: white;
+  background-color: rgb(202, 52, 50);
+  border-color: rgb(202, 52, 50);
+}
+
+.card .card-content .item-management .button:hover > img {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
