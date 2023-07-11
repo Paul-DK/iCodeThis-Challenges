@@ -1,5 +1,7 @@
 :root {
   --card-section-corners: 5px;
+  --clr-brand-red: hsl(1, 60%, 49%);
+  --clr-brand-faded: hsl(1, 60%, 90%);
 }
 
 body {
@@ -34,7 +36,7 @@ body {
 }
 
 .card .card-header {
-  background-color: rgb(202, 52, 50);
+  background-color: var(--clr-brand-red);
   height: 90px;
   border-top-left-radius: var(--card-section-corners);
   border-top-right-radius: var(--card-section-corners);
@@ -79,14 +81,20 @@ body {
 }
 
 .card .card-content .item-management .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
-  text-align: center;
   font-size: 1rem;
   padding: 0.5rem;
   background-color: white;
   margin: 2px 0;
   border: 1px solid lightgray;
   border-radius: var(--card-section-corners);
+}
+
+button {
+  transition: all .2s ease-in-out;
 }
 
 button img {
@@ -123,7 +131,7 @@ button img {
 
 .card .charge-checkout .charge-summary {
   padding: 1.5rem;
-  background-color: rgb(254, 230, 230);
+  background-color: var(--clr-brand-faded);
   border-radius: var(--card-section-corners);
 }
 
@@ -146,9 +154,8 @@ button img {
   padding: 0.5rem 0;
   width: 100%;
   border-radius: var(--card-section-corners);
-  border: 3px solid rgb(202, 52, 50);
+  border: 3px solid var(--clr-brand-red);
   background-color: white;
-  color: rgb(202, 52, 50);
 }
 .charge-checkout > button img {
   height: 1.5rem;
@@ -164,6 +171,16 @@ button img {
 }
 
 .card .card-content .item-management .button:hover > img {
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
+  filter: brightness(100);
+  -webkit-filter: brightness(100);
+}
+
+.charge-checkout > button:hover {
+  color: white;
+  background-color: rgb(202, 52, 50);
+}
+
+.charge-checkout > button:hover > img {
+  filter: brightness(100);
+  -webkit-filter: brightness(100);
 }
