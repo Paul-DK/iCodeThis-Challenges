@@ -76,6 +76,49 @@ body {
   padding: 8rem 2rem 2rem;
 }
 
+.card .card-content .cart table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.card .card-content .cart td {
+  padding: 3px;
+}
+
+.card .card-content .cart td.product {
+  width: 54%;
+}
+
+.card .card-content .cart td.sizeInfo {
+  text-align: center;
+  width: 20%;
+}
+.card .card-content .cart td.remove,
+.card .card-content .cart td.quantity,
+.card .card-content .cart td.addAnother {
+  text-align: center;
+  width: 2%;
+}
+
+.card .card-content .cart td.cancelItem {
+  text-align: end;
+  width: 5%;
+}
+
+.card .card-content .cart td.price {
+  text-align: end;
+  width: 15%;
+}
+
+.card .card-content .cart tr:nth-child(odd) {
+  background-color: rgb(236, 236, 236);
+}
+
+.card .card-content .cart tr:nth-child(even) {
+  background-color: var(--clr-brand-faded);
+}
+
 .card .card-content .item-management {
   padding: 0 2rem 2rem;
 }
@@ -84,7 +127,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1rem;
   padding: 0.5rem;
   background-color: white;
@@ -94,7 +137,7 @@ body {
 }
 
 button {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 button img {
