@@ -80,30 +80,32 @@ body {
   table-layout: fixed;
   width: 100%;
   font-size: 0.8rem;
+  border-spacing: 0;
 }
 
 .card .card-content .cart td {
-  padding: 3px;
+  padding: 5px;
 }
 
 .card .card-content .cart td.product {
-  width: 54%;
+  width: 49%;
 }
 
 .card .card-content .cart td.sizeInfo {
   text-align: center;
-  width: 20%;
+  width: 15%;
 }
+
 .card .card-content .cart td.remove,
 .card .card-content .cart td.quantity,
 .card .card-content .cart td.addAnother {
   text-align: center;
-  width: 2%;
+  width: 8%;
 }
 
 .card .card-content .cart td.cancelItem {
-  text-align: end;
-  width: 5%;
+  text-align: center;
+  width: 8%;
 }
 
 .card .card-content .cart td.price {
@@ -206,6 +208,13 @@ button img {
 }
 
 /* Button Hover Styles */
+
+.card .card-content .cart td.remove:hover,
+.card .card-content .cart td.addAnother:hover,
+.card .card-content .cart td.cancelItem:hover {
+  color: white;
+  background-color: var(--clr-brand-red);
+}
 
 .card .card-content .item-management .button:hover {
   color: white;
