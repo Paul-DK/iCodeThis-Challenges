@@ -79,7 +79,7 @@ body {
 .card .card-content .cart table {
   table-layout: fixed;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   border-spacing: 0;
 }
 
@@ -88,19 +88,19 @@ body {
 }
 
 .card .card-content .cart td.product {
-  width: 49%;
+  width: 53%;
 }
 
 .card .card-content .cart td.sizeInfo {
   text-align: center;
-  width: 15%;
+  width: 14%;
 }
 
 .card .card-content .cart td.remove,
 .card .card-content .cart td.quantity,
 .card .card-content .cart td.addAnother {
   text-align: center;
-  width: 8%;
+  width: 6%;
 }
 
 .card .card-content .cart td.cancelItem {
