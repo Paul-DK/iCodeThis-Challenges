@@ -129,7 +129,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   padding: 0.5rem;
   background-color: white;
@@ -194,7 +194,7 @@ button img {
 }
 
 .charge-checkout > button {
-  font-weight: 700;
+  font-weight: 500;
   margin: 1rem 0 2rem;
   padding: 0.5rem 0;
   width: 100%;
