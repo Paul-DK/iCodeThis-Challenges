@@ -212,11 +212,13 @@ button img {
 .card .card-content .cart td.remove:hover,
 .card .card-content .cart td.addAnother:hover,
 .card .card-content .cart td.cancelItem:hover {
+  cursor: pointer;
   color: white;
   background-color: var(--clr-brand-red);
 }
 
 .card .card-content .item-management .button:hover {
+  cursor: pointer;
   color: white;
   background-color: rgb(202, 52, 50);
   border-color: rgb(202, 52, 50);
@@ -228,6 +230,7 @@ button img {
 }
 
 .charge-checkout > button:hover {
+  cursor: pointer;
   color: white;
   background-color: rgb(202, 52, 50);
 }
