@@ -51,13 +51,13 @@ article h2 {
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Roboto Serif", serif;
-  text-wrap: balance;
+  /* text-wrap: balance; */
   margin-block: 1.5rem;
 }
 
 article p {
   line-height: 2;
-  text-wrap: balance;
+  /* text-wrap: balance; */
   margin-bottom: 1rem;
 }
 
