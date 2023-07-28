@@ -82,9 +82,9 @@ article p.hiddenFromMobile {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Why is this not working? */
   align-items: center;
-  position: absolute;
+  position: absolute; /* Is it because of this? If so, how do I work around it? */
   bottom: calc(0px + 1.5rem);
 }
 
@@ -109,8 +109,8 @@ footer {
     display: block;
   }
   .innerWrapper hr {
-  margin: 2rem 3.5rem;
-}
+    margin: 3.5rem 3.5rem;
+  }
   .author-info > img {
     width: 80px;
     height: 80px;
