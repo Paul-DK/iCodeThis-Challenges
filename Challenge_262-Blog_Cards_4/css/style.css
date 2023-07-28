@@ -1,4 +1,11 @@
-/* Mobile First Styles */
+/* Mobile First */
+
+:root {
+  --main-spacing: 1.5rem;
+  --main-padding: 2rem;
+  --main-border-radius: 5px;
+}
+
 
 html {
   font-size: 14px;
@@ -15,15 +22,15 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem;
-  gap: 1.5rem;
+  margin: var(--main-spacing);
+  gap: var(--main-spacing);
 }
 
 .card {
   max-width: 480px;
-  height: calc(100dvh - 3rem);
+  height: calc(100dvh - (var(--main-spacing) * 2));
   background-color: white;
-  border-radius: 5px;
+  border-radius: var(--main-border-radius);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -34,8 +41,8 @@ header {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: var(--main-border-radius);
+  border-top-right-radius: var(--main-border-radius);
 }
 
 header img {
@@ -71,7 +78,7 @@ article p.hiddenFromMobile {
 .author-info {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: var(--main-spacing);
 }
 
 .author-info > img {
@@ -82,10 +89,11 @@ article p.hiddenFromMobile {
 
 footer {
   display: flex;
-  justify-content: space-between; /* Why is this not working? */
+  width: calc(100% - (var(--main-padding) * 2));
+  justify-content: space-between;
   align-items: center;
-  position: absolute; /* Is it because of this? If so, how do I work around it? */
-  bottom: calc(0px + 1.5rem);
+  position: absolute;
+  bottom: calc(0px + var(--main-spacing));
 }
 
 @keyframes move {
@@ -101,15 +109,20 @@ footer {
   }
 }
 
+/* Tablet and Higher(?) */
+
 @media only screen and (min-width: 540px) {
   html {
     font-size: 16px;
+  }
+  .card {
+      max-width: 600px;
   }
   article p.hiddenFromMobile {
     display: block;
   }
   .innerWrapper hr {
-    margin: 3.5rem 3.5rem;
+    margin: 1.5rem 3.5rem;
   }
   .author-info > img {
     width: 80px;
