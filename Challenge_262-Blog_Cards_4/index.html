@@ -3,103 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Blog Cards 4</title>
+    <link rel="stylesheet" href="css/newstyles.css" />
   </head>
-
   <body>
-    <div class="card-container">
-      <div class="card">
-        <header>
-          <img src="img/lightning.jpg" alt="" />
-        </header>
-        <div class="innerWrapper">
-          <article>
-            <h2>Lightning Safety<br />10 myths — and the facts</h2>
-            <p>
-              “When thunder roars, go indoors!” is a truism that actually holds
-              up. But much of what we think we know about lightning is fiction.
-              Here are some common myths, along with the facts that will keep
-              you and your loved ones safe in a storm.
-            </p>
-            <p class="hiddenFromMobile">
-              At any given time on our planet Earth, there are 1,800
-              thunderstorms in progress—and with them comes lightning. During a
-              thunderstorm, your safety and wellbeing may depend on knowing the
-              difference between these lightning myths and the facts.
-            </p>
-            <a
-              href="https://www.iii.org/article/lightning-safety-10-myths-and-the-facts"
-              target="_blank"
-              >Read more ...</a
-            >
-            <hr />
-          </article>
-          <footer>
-            <div class="author-info">
-              <img src="img/lightningpfp.jpg" alt="" />
-              <div class="author-details">
-                <a rel="author">A. Nonymous</a>
-                <p class="job-title">Insurance Blogger</p>
-              </div>
-            </div>
-            <p class="published-date">20, June</p>
-          </footer>
-        </div>
-      </div>
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
 
-      <div class="card">
-        <header>
-          <img src="img/autumn.jpg" alt="" />
-        </header>
-        <div class="innerWrapper">
-          <article>
-            <h2>Some article about Autumn!!</h2>
-            <p></p>
-          </article>
-          <hr />
-          <footer>
-            <div class="author-info">
-              <img src="img/autumnpfp.jpg" alt="" />
-              <div class="author-details">
-                <a rel="author">A. Person</a>
-                <p class="job-title"></p>
+    <div class="card">
+      <header>
+        <img
+          src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/lightning.jpg"
+          alt="Intense Lightning Storm"
+        />
+      </header>
+      <div class="wrapper">
+        <main>
+          <h2>Lightning Safety Myths</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+            doloremque possimus vitae quasi voluptatem fuga molestiae odit eius
+            quia. Reprehenderit ab provident quasi nobis atque odit doloremque
+            deserunt quo, cupiditate.
+          </p>
+        </main>
+        <hr />
+        <footer>
+          <div class="profileInfo">
+            <div class="leftSide">
+              <img
+                src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/lightningpfp.jpg"
+                alt="Profile Picutre of A. Nonymous"
+              />
+              <div class="profileDetails">
+                <h3>A. Nonymous</h3>
+                <p class="jobTitle">Insurance Blogger</p>
               </div>
-              <p class="published-date"></p>
             </div>
-          </footer>
-        </div>
-      </div>
-
-      <div class="card">
-        <header>
-          <img src="img/rain.jpg" alt="" />
-        </header>
-        <div class="innerWrapper">
-          <article>
-            <h2>Rain, rain, go away!!</h2>
-            <p></p>
-          </article>
-          <hr />
-          <footer>
-            <div class="author-info">
-              <img src="img/rainpfp.jpg" alt="" />
-              <div class="author-details">
-                <a rel="author">J. Worth</a>
-                <p class="job-title"></p>
-              </div>
-              <p class="published-date"></p>
-            </div>
-          </footer>
-        </div>
+            <p class="date">20, June</p>
+          </div>
+        </footer>
       </div>
     </div>
+    <div class="card">
+      <header>
+        <img
+          src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/autumn.jpg"
+          alt="Golden Autumnal Leaves"
+        />
+      </header>
+      <div class="wrapper">
+        <main>
+          <h2>All the Leaves are Brown</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+            doloremque possimus vitae quasi voluptatem fuga molestiae odit eius
+            quia. Reprehenderit ab provident quasi nobis atque odit doloremque
+            deserunt quo, cupiditate.
+          </p>
+        </main>
+        <hr />
+        <footer>
+          <div class="profileInfo">
+            <div class="leftSide">
+              <img
+                src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/autumnpfp.jpg"
+                alt="Profile Picture of Mama Papa"
+              />
+              <div class="profileDetails">
+                <h3>Mama Papa</h3>
+                <p class="jobTitle">Seasonal Singer</p>
+              </div>
+            </div>
+            <p class="date">2, October</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="card">
+      <header>
+        <img
+          src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/rain.jpg"
+          alt="Heavy Rain on a Red Umbrella"
+        />
+      </header>
+      <div class="wrapper">
+        <main>
+          <h2>Its like Rain, on your Wedding Day</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+            doloremque possimus vitae quasi voluptatem fuga molestiae odit eius
+            quia. Reprehenderit ab provident quasi nobis atque odit doloremque
+            deserunt quo, cupiditate.
+          </p>
+        </main>
+        <hr />
+        <footer>
+          <div class="profileInfo">
+            <div class="leftSide">
+              <img
+                src="https://raw.githubusercontent.com/Paul-DK/iCodeThis-Challenges/main/Challenge_262-Blog_Cards_4/img/rainpfp.jpg"
+                alt="Profile Picture of A. Morrisette"
+              />
+              <div class="profileDetails">
+                <h3>A. Morrisette</h3>
+                <p class="jobTitle">Unironic Photographer</p>
+              </div>
+            </div>
+            <p class="date">9, November</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      // Accessing the checkbox element
+      document
+        .getElementById("theme-toggle")
+        // Adding an event listener to detect changes on the checkbox (i.e., checked or unchecked)
+        .addEventListener("change", function () {
+          // Getting the "checked" property of the checkbox
+          // If it's checked, it will return true, otherwise false
+          var isChecked = this.checked;
+
+          // Setting a "data-theme" attribute on the <html> element (document.documentElement)
+          // If the checkbox is checked, it sets the attribute to "dark", otherwise "light"
+          document.documentElement.setAttribute(
+            "data-theme",
+            isChecked ? "dark" : "light"
+          );
+        });
+    </script>
   </body>
 </html>
