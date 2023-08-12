@@ -1,15 +1,35 @@
 /* Main Styling */
 
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/marsbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  z-index: -1;
+}
+
 /* Styling for Button */
 
 
 
 /* Styling for Rating */
-
-body {
-  background: #222225;
-  color: white;
-}
 
 .rating {
   display: flex;
