@@ -1,3 +1,8 @@
+:root {
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Anek Telugu", sans-serif;
+}
+
 /* Main Styling */
 
 body {
@@ -6,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #000000;
 }
 
@@ -21,14 +26,28 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  filter: blur(3px) brightness(0);
+  -webkit-filter: blur(3px) brightness(0.4);
   z-index: -1;
 }
 
 /* Styling for Button */
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
 
+.morebutton {
+  width: 50%;
+}
+
+.morebutton > img {
+  height: 1rem;
+  width: 1rem;
+}
 
 /* Styling for Rating */
 
@@ -67,4 +86,59 @@ body::before {
 
 .rating:hover > input:checked ~ label:before {
   opacity: 0.6;
+}
+
+/* Card Styling */
+
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  max-width:70%;
+  padding: 1rem;
+  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, .4);
+}
+
+.wrapper {
+  padding: 2rem 2rem 1rem 2rem ;
+}
+
+.top {
+  display: flex;
+  gap: 1rem;
+}
+
+.cover-rating {
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
+}
+
+.title-preview {
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
+}
+
+.title-preview > h2 {
+  font-family: var(--heading-font);
+  color: rgb(255, 197, 33);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.title-preview > p.author {
+  font-family: var(--body-font);
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  margin-block-end: 1rem;
+}
+
+.title-preview > p.author > span {
+  font-family: var(--body-font);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.title-preview > p.snippet {
+  font-family: var(--body-font);
+  margin-block-end: 2rem;
 }
