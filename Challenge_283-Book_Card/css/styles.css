@@ -219,7 +219,8 @@ button {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-button:hover {
+button:hover,
+#copyButton:hover {
   background-color: rgb(255, 197, 33);
   border: solid 2px #000000;
   color: #000000;
@@ -362,8 +363,9 @@ td:nth-child(2) {
   width: 28%;
   padding: 5px 10px;
   cursor: pointer;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 2px rgb(255, 197, 33);
+  color: rgb(255, 255, 255);
 }
 
 .share-modal-content .socialmediaList {
