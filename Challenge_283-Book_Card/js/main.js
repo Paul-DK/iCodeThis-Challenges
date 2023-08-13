@@ -9,7 +9,7 @@ document.querySelector(".morebutton").addEventListener("click", function() {
     this.textContent = 'read less';
   } else {
     readMoreDiv.style.height = "0px";
-    this.textContent = 'read mess';
+    this.textContent = 'read more';
   }
 });
 

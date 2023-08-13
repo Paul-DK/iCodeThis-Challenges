@@ -169,6 +169,7 @@ body.fade-out::before {
   font-weight: 800;
   font-size: 3rem;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
 .title-preview > p.author {
