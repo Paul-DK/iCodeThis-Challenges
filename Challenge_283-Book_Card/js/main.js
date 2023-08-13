@@ -64,3 +64,17 @@ closeButton.addEventListener('click', () => {
     fadeIn();
   }, 3000);
 });
+
+// Copy Share Link to Clipboard
+
+document.getElementById('copyButton').addEventListener('click', function() {
+  var copyText = document.getElementById('shareLink');
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value)
+    .then(() => {
+      alert('Link copied to clipboard!');
+    })
+    .catch(err => {
+      console.error('Failed to copy link: ', err);
+    });
+});
