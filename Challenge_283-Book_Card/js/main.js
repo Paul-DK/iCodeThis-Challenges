@@ -6,8 +6,10 @@ document.querySelector(".morebutton").addEventListener("click", function() {
   
   if (readMoreDiv.style.height === "0px" || readMoreDiv.style.height === "") {
     readMoreDiv.style.height = snippet.offsetHeight + "px";
+    this.textContent = 'read less';
   } else {
     readMoreDiv.style.height = "0px";
+    this.textContent = 'read mess';
   }
 });
 

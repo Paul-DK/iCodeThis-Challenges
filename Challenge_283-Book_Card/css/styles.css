@@ -147,6 +147,7 @@ body.fade-out::before {
 
 .top {
   display: flex;
+  min-height: 350px;
   gap: 1rem;
 }
 
@@ -224,7 +225,8 @@ button:hover {
 }
 
 .morebutton {
-  width: fit-content;
+  width: 150px;
+  text-align: center;
 }
 
 .morebutton > img {
