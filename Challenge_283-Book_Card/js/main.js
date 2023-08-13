@@ -73,6 +73,8 @@ document.getElementById('copyButton').addEventListener('click', function() {
   navigator.clipboard.writeText(copyText.value)
     .then(() => {
       alert('Link copied to clipboard!');
+      copyText.blur();
+      window.getSelection().removeAllRanges();
     })
     .catch(err => {
       console.error('Failed to copy link: ', err);
