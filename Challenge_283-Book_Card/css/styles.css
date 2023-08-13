@@ -369,7 +369,7 @@ td:nth-child(2) {
 .share-modal-content .socialmediaList {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .share-modal-content .socialmediaList a img:hover {
