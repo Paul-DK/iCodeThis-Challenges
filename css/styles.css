@@ -1,3 +1,5 @@
+/* General Styles */
+
 body {
   background-color: #f4f4f4;
   transition: background-color 0.5s, color 0.5s;
@@ -16,6 +18,8 @@ body {
   height: auto;
 }
 
+/* Image Hover Effects */
+
 .card-img-top {
   transition: all 0.3s ease;
 }
@@ -26,6 +30,7 @@ body {
 }
 
 /* Dark theme */
+
 body.dark {
   background-color: #343a40;
   color: #f4f4f4;
@@ -47,4 +52,20 @@ body.dark .card {
 
 body.dark .card a {
   color: #f4f4f4;
+}
+
+/* Theme Toggle Button Styles */
+
+#theme-toggle:hover {
+  background-color: #dddddd;
+}
+
+body.dark #theme-toggle {
+  background-color: #343a40;
+  color: #f4f4f4;
+  border-color: #f4f4f4;
+}
+
+body.dark #theme-toggle:hover {
+  background-color: #464e56;
 }
