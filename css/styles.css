@@ -61,11 +61,12 @@ body.dark .card a {
 }
 
 body.dark #theme-toggle {
-  background-color: #343a40;
-  color: #f4f4f4;
-  border-color: #f4f4f4;
+  background-color: #f4f4f4;
+  color: #343a40;
+  border-color: #343a40;
 }
 
 body.dark #theme-toggle:hover {
-  background-color: #464e56;
+  background-color: #343a40;
+  color: #f4f4f4;
 }
