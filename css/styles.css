@@ -1,0 +1,41 @@
+body {
+    background-color: #f4f4f4;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.card {
+    margin: 15px 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Dark theme */
+body.dark {
+    background-color: #343a40;
+    color: #f4f4f4;
+}
+
+body.dark .navbar {
+    background-color: #f4f4f4;
+}
+
+body.dark .navbar a,
+body.dark .navbar button {
+    color: #343a40;
+}
+
+body.dark .card {
+    background-color: #464e56;
+    color: #f4f4f4;
+}
+
+body.dark .card a {
+    color: #f4f4f4;
+}
