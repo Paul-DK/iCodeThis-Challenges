@@ -45,6 +45,18 @@ projects.forEach(project => {
 
 // Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
+
+function setToggleButtonText() {
+  if (document.body.classList.contains('dark')) {
+    themeToggle.innerText = 'Light Mode';
+  } else {
+    themeToggle.innerText = 'Dark Mode';
+  }
+}
+
+setToggleButtonText();
+
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
+  document.body.classList.toggle('dark');
+  setToggleButtonText();
 });
