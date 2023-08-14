@@ -16,10 +16,13 @@ projects.forEach(project => {
     const card = document.createElement('div');
     card.className = 'card';
 
+    const imgLink = document.createElement('a');
+    imgLink.href = project.folder;
     const img = document.createElement('img');
     img.className = 'card-img-top';
     img.src = project.image;
-    card.appendChild(img);
+    imgLink.appendChild(img);
+    card.appendChild(imgLink);
 
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
