@@ -18,9 +18,11 @@ projects.forEach(project => {
 
     const imgLink = document.createElement('a');
     imgLink.href = project.folder;
+
     const img = document.createElement('img');
     img.className = 'card-img-top';
     img.src = project.image;
+    img.alt = project.title;
     imgLink.appendChild(img);
     card.appendChild(imgLink);
 
@@ -49,8 +51,10 @@ const themeToggle = document.getElementById('theme-toggle');
 function setToggleButtonText() {
   if (document.body.classList.contains('dark')) {
     themeToggle.innerText = 'Light Mode';
+    themeToggle.setAttribute('aria-label', 'Switch to light mode');
   } else {
     themeToggle.innerText = 'Dark Mode';
+    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
   }
 }
 
