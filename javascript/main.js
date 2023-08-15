@@ -47,6 +47,7 @@ const projects = [
 
 function createProjectCards() {
   const container = document.getElementById('projects');
+  let content = '';
   projects.forEach((project) => {
     const card = `
       <div class="col-lg-4 col-md-6 card">
@@ -63,8 +64,9 @@ function createProjectCards() {
         </div>
       </div>
     `;
-    container.innerHTML += card;
+    content += card;
   });
+  container.innerHTML = content;
 }
 
 function updateTheme() {
