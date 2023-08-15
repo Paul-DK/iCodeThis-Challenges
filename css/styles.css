@@ -18,6 +18,12 @@ body {
   text-align: center;
 }
 
+.card h3 {
+  font-size: 1.2rem;
+  margin-block: 10px;
+  text-align: center;
+}
+
 /* Image Container Styles */
 .project-image {
   position: relative;
@@ -107,4 +113,3 @@ body.dark #theme-toggle:hover {
   background-color: #343a40;
   color: #f4f4f4;
 }
-
