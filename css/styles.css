@@ -28,18 +28,22 @@ body {
 /* Image Container Styles */
 .project-image {
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Add the transition property here */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Remove filter transition here */
 }
 
 .project-image img {
   max-width: 100%;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add filter transition to the image */
 }
 
 .project-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Apply the scaling transformation to the container */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  filter: brightness(0.7);
+}
+
+.project-image:hover img {
+  filter: brightness(0.7); /* Apply the brightness filter to the image only */
 }
 
 /* Overlay Styles */
