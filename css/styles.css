@@ -17,6 +17,19 @@ body {
   height: auto;
 }
 
+.card-body {
+  position: relative;
+  text-align: center;
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
 /* Image Hover Effects */
 
 .img-and-button {
