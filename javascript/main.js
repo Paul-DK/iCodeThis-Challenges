@@ -85,13 +85,6 @@ projects.forEach((project) => {
   imgDiv.appendChild(overlay);
   imgAndButtonDiv.appendChild(imgDiv);
 
-  const link = document.createElement('a');
-  link.className = 'btn btn-primary';
-  link.href = project.folder;
-  link.innerText = 'View Project';
-
-  imgAndButtonDiv.appendChild(link); // Append the link to the imgAndButtonDiv
-
   card.appendChild(imgAndButtonDiv);
 
   const cardBody = document.createElement('div');
@@ -101,6 +94,12 @@ projects.forEach((project) => {
   title.className = 'card-title';
   title.innerText = project.title;
   cardBody.appendChild(title);
+
+  const link = document.createElement('a');
+  link.className = 'btn btn-primary';
+  link.href = project.folder;
+  link.innerText = 'View Project';
+  cardBody.appendChild(link); // Append the link inside the card body, after the title
 
   card.appendChild(cardBody);
   projectDiv.appendChild(card);
