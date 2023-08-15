@@ -57,11 +57,32 @@ projects.forEach(project => {
     const imgLink = document.createElement('a');
     imgLink.href = project.folder;
 
+    const imgDiv = document.createElement('div');
+    imgDiv.className = 'project-image';
+
     const img = document.createElement('img');
     img.className = 'card-img-top';
     img.src = project.image;
     img.alt = project.title;
-    imgLink.appendChild(img);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'project-overlay';
+
+    const description = document.createElement('p');
+    description.innerText = project.description;
+    overlay.appendChild(description);
+
+    const list = document.createElement('ul');
+    project.details.forEach(detail => {
+        const listItem = document.createElement('li');
+        listItem.innerText = detail;
+        list.appendChild(listItem);
+    });
+    overlay.appendChild(list);
+
+    img.appendChild(overlay);
+    imgDiv.appendChild(img);
+    imgLink.appendChild(imgDiv);
     card.appendChild(imgLink);
 
     const cardBody = document.createElement('div');
@@ -79,25 +100,6 @@ projects.forEach(project => {
     cardBody.appendChild(link);
 
     card.appendChild(cardBody);
-    projectDiv.appendChild(card);
-    projectsDiv.appendChild(projectDiv);
-
-    const overlay = document.createElement('div');
-    overlay.className = 'project-overlay';
-  
-    const description = document.createElement('p');
-    description.innerText = project.description;
-    overlay.appendChild(description);
-  
-    const list = document.createElement('ul');
-    project.details.forEach(detail => {
-      const listItem = document.createElement('li');
-      listItem.innerText = detail;
-      list.appendChild(listItem);
-    });
-    overlay.appendChild(list);
-
-    card.appendChild(overlay);
     projectDiv.appendChild(card);
     projectsDiv.appendChild(projectDiv);
 });
