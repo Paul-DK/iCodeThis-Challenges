@@ -20,7 +20,7 @@ body {
 /* Image Hover Effects */
 
 .project-image {
-  position: relative; /* Ensures that child elements positioned absolutely are relative to this container */
+  position: relative;
   transition: all 0.3s ease;
   overflow: hidden;
   display: flex;

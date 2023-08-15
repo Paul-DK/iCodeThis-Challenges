@@ -66,7 +66,7 @@ projects.forEach((project) => {
 
   const link = document.createElement('a');
   link.className = 'btn btn-primary';
-  link.href = project.folder + '/index.html';
+  link.href = project.folder;
   link.innerText = 'View Project';
 
   imgDiv.appendChild(link); // Append the link to the imgDiv
