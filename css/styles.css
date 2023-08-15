@@ -25,6 +25,7 @@ body {
 .btn-primary {
   display: block;
   margin: 10px auto;
+  width: auto;
 }
 
 /* Image Hover Effects */
