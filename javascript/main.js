@@ -45,69 +45,56 @@ const projects = [
     },
 ];
 
-const projectsDiv = document.getElementById('projects');
-
-projects.forEach((project) => {
-  const projectDiv = document.createElement('div');
-  projectDiv.className = 'col-md-4';
-
-  const card = document.createElement('div');
-  card.className = 'card';
-
-  const imgAndButtonDiv = document.createElement('div');
-  imgAndButtonDiv.className = 'img-and-button';
-
-  const imgDiv = document.createElement('div');
-  imgDiv.className = 'project-image';
-
-  const img = document.createElement('img');
-  img.className = 'card-img-top';
-  img.src = project.image;
-  img.alt = project.title;
-
-  imgDiv.appendChild(img);
-
-  const overlay = document.createElement('div');
-  overlay.className = 'project-overlay';
-
-  const description = document.createElement('p');
-  description.innerText = project.description;
-  overlay.appendChild(description);
-
-  const list = document.createElement('ul');
-  project.details.forEach((detail) => {
-    const listItem = document.createElement('li');
-    listItem.innerText = detail;
-    list.appendChild(listItem);
+function createProjectCards() {
+  const container = document.getElementById('projects');
+  projects.forEach((project) => {
+    const card = `
+      <div class="col-lg-4 col-md-6 card">
+        <div class="img-and-button">
+          <div class="project-image">
+            <img src="${project.image}" alt="${project.title}">
+            <div class="project-overlay">
+              <p>${project.description}</p>
+              <ul>${project.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
+            </div>
+          </div>
+          <h3>${project.title}</h3>
+          <a href="${project.folder}" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    `;
+    container.innerHTML += card;
   });
-  overlay.appendChild(list);
+}
 
-  imgDiv.appendChild(overlay);
-  imgAndButtonDiv.appendChild(imgDiv);
+function updateTheme() {
+  const body = document.body;
+  const themeToggle = document.getElementById('theme-toggle');
+  const navbarBrand = document.querySelector('.navbar-brand');
 
-  const cardBody = document.createElement('div');
-  cardBody.className = 'card-body';
+  if (body.classList.contains('dark')) {
+    themeToggle.innerText = 'Light Mode';
+    navbarBrand.style.color = '#f4f4f4';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    themeToggle.innerText = 'Dark Mode';
+    navbarBrand.style.color = '#343a40';
+    localStorage.removeItem('theme');
+  }
+}
 
-  const title = document.createElement('h5');
-  title.className = 'card-title';
-  title.innerText = project.title;
-  cardBody.appendChild(title);
-
-  const button = document.createElement('a');
-  button.className = 'btn btn-primary';
-  button.href = project.folder;
-  button.innerText = 'View Project';
-  imgAndButtonDiv.appendChild(button);
-
-  cardBody.appendChild(imgAndButtonDiv);
-  card.appendChild(cardBody);
-  projectDiv.appendChild(card);
-
-  projectsDiv.appendChild(projectDiv);
-});
-
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
+function toggleTheme() {
   document.body.classList.toggle('dark');
+  updateTheme();
+}
+
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+document.addEventListener('DOMContentLoaded', () => {
+  createProjectCards();
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+  updateTheme();
 });
