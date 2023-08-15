@@ -18,26 +18,25 @@ body {
   text-align: center;
 }
 
-/* Image Hover Effects */
-.img-and-button {
+/* Image Container Styles */
+.project-image {
   position: relative;
+  overflow: hidden; /* To keep the scaled image within bounds */
 }
 
-.img-and-button img,
-.img-and-button .btn-primary {
-  transition: all 0.3s ease;
+.project-image img {
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  display: block;
 }
 
-.img-and-button img:hover {
+.project-image:hover img {
   transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   filter: brightness(0.7);
 }
 
-.img-and-button .btn-primary:hover {
-  transform: none; /* No scaling for button */
-}
-
+/* Overlay Styles */
 .project-overlay {
   position: absolute;
   top: 0;
@@ -57,7 +56,7 @@ body {
   padding-right: 2.25rem;
 }
 
-.img-and-button:hover .project-overlay {
+.project-image:hover .project-overlay {
   opacity: 1;
 }
 
@@ -108,3 +107,4 @@ body.dark #theme-toggle:hover {
   background-color: #343a40;
   color: #f4f4f4;
 }
+
