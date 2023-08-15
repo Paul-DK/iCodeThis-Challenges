@@ -8,10 +8,6 @@ body {
   background-color: #343a40;
 }
 
-.card {
-  margin: 15px 7px;
-}
-
 .card img {
   max-width: 100%;
   height: auto;
