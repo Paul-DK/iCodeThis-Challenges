@@ -55,7 +55,7 @@ projects.forEach((project) => {
   card.className = 'card';
 
   const imgLink = document.createElement('a');
-  imgLink.href = project.folder + '/index.html'; // Link to the index.html inside the project folder
+  imgLink.href = project.folder + '/index.html';
 
   const imgDiv = document.createElement('div');
   imgDiv.className = 'project-image';
@@ -66,26 +66,6 @@ projects.forEach((project) => {
   img.alt = project.title;
 
   imgDiv.appendChild(img);
-  imgLink.appendChild(imgDiv);
-  card.appendChild(imgLink);
-
-  const cardBody = document.createElement('div');
-  cardBody.className = 'card-body';
-
-  const title = document.createElement('h5');
-  title.className = 'card-title';
-  title.innerText = project.title;
-  cardBody.appendChild(title);
-
-  const link = document.createElement('a');
-  link.className = 'btn btn-primary';
-  link.href = project.folder + '/index.html'; // Link to the index.html inside the project folder
-  link.innerText = 'View Project';
-  cardBody.appendChild(link);
-
-  card.appendChild(cardBody);
-  projectDiv.appendChild(card);
-  projectsDiv.appendChild(projectDiv);
 
   const overlay = document.createElement('div');
   overlay.className = 'project-overlay';
@@ -102,11 +82,28 @@ projects.forEach((project) => {
   });
   overlay.appendChild(list);
 
-  imgDiv.appendChild(overlay); // Append overlay to imgDiv instead of the card
+  imgDiv.appendChild(overlay);
+  imgLink.appendChild(imgDiv);
+  card.appendChild(imgLink);
+
+  const cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
+
+  const title = document.createElement('h5');
+  title.className = 'card-title';
+  title.innerText = project.title;
+  cardBody.appendChild(title);
+
+  const link = document.createElement('a');
+  link.className = 'btn btn-primary';
+  link.href = project.folder + '/index.html';
+  link.innerText = 'View Project';
+  cardBody.appendChild(link);
+
+  card.appendChild(cardBody);
   projectDiv.appendChild(card);
   projectsDiv.appendChild(projectDiv);
 });
-
 
 // Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
@@ -127,3 +124,4 @@ themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   setToggleButtonText();
 });
+
