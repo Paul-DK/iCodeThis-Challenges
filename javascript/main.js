@@ -50,7 +50,7 @@ function createProjectCards() {
   let content = '';
   projects.forEach((project) => {
     const card = `
-      <div class="col-lg-4 col-md-6 card mb-3 mx-2">
+      <div class="col card mb-3">
         <div class="img-and-button">
           <div class="project-image">
             <img src="${project.image}" alt="${project.title}">
