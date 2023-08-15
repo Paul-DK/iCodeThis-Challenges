@@ -19,19 +19,31 @@ body {
 
 /* Image Hover Effects */
 
-.project-container {
+.img-and-button {
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
 }
 
-.project-container:hover {
+.img-and-button:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
+.img-and-button .project-image img {
   max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.img-and-button:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transition: all 0.3s ease;
 }
 
 /* Dark theme */
@@ -97,6 +109,6 @@ body.dark #theme-toggle:hover {
   padding-right: 2.25rem;
 }
 
-.project-container:hover .project-overlay {
+.img-and-button:hover .project-overlay {
   opacity: 1;
 }
