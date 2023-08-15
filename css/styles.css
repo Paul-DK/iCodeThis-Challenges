@@ -70,3 +70,44 @@ body.dark #theme-toggle:hover {
   background-color: #343a40;
   color: #f4f4f4;
 }
+
+/* Overlay Styles */
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  overflow: auto;
+  color: #333;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .project-overlay {
+  display: flex;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
