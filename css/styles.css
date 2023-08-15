@@ -20,8 +20,18 @@ body {
 /* Image Hover Effects */
 
 .project-image {
+  position: relative; /* Ensures that child elements positioned absolutely are relative to this container */
   transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.project-image .btn {
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
 }
 
 .project-image:hover {
@@ -73,10 +83,6 @@ body.dark #theme-toggle:hover {
 
 /* Overlay Styles */
 
-.project-image {
-  position: relative;
-}
-
 .project-overlay {
   position: absolute;
   top: 0;
@@ -91,12 +97,11 @@ body.dark #theme-toggle:hover {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 1.125rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  font-size: 2rem;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
-.project-image:hover .project-overlay,
-.project-image .btn:hover ~ .project-overlay {
+.project-image:hover .project-overlay {
   opacity: 1;
 }

@@ -54,9 +54,6 @@ projects.forEach((project) => {
   const card = document.createElement('div');
   card.className = 'card';
 
-  const imgLink = document.createElement('a');
-  imgLink.href = project.folder + '/index.html';
-
   const imgDiv = document.createElement('div');
   imgDiv.className = 'project-image';
 
@@ -66,6 +63,13 @@ projects.forEach((project) => {
   img.alt = project.title;
 
   imgDiv.appendChild(img);
+
+  const link = document.createElement('a');
+  link.className = 'btn btn-primary';
+  link.href = project.folder + '/index.html';
+  link.innerText = 'View Project';
+
+  imgDiv.appendChild(link); // Append the link to the imgDiv
 
   const overlay = document.createElement('div');
   overlay.className = 'project-overlay';
@@ -83,8 +87,7 @@ projects.forEach((project) => {
   overlay.appendChild(list);
 
   imgDiv.appendChild(overlay);
-  imgLink.appendChild(imgDiv);
-  card.appendChild(imgLink);
+  card.appendChild(imgDiv);
 
   const cardBody = document.createElement('div');
   cardBody.className = 'card-body';
@@ -93,12 +96,6 @@ projects.forEach((project) => {
   title.className = 'card-title';
   title.innerText = project.title;
   cardBody.appendChild(title);
-
-  const link = document.createElement('a');
-  link.className = 'btn btn-primary';
-  link.href = project.folder + '/index.html';
-  link.innerText = 'View Project';
-  cardBody.appendChild(link);
 
   card.appendChild(cardBody);
   projectDiv.appendChild(card);
@@ -124,4 +121,3 @@ themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   setToggleButtonText();
 });
-
