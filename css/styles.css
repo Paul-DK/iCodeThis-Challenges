@@ -20,7 +20,8 @@ body {
 
 .card h3 {
   font-size: 1.2rem;
-  margin-block: 10px;
+  margin-block-start: 15px;
+  margin-block-end: 10px;
   text-align: center;
 }
 
