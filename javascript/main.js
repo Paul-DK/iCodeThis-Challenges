@@ -73,14 +73,17 @@ function updateTheme() {
   const body = document.body;
   const themeToggle = document.getElementById('theme-toggle');
   const navbarBrand = document.querySelector('.navbar-brand');
+  const navbar = document.querySelector('.navbar');
 
   if (body.classList.contains('dark')) {
     themeToggle.innerText = 'Light Mode';
     navbarBrand.style.color = '#f4f4f4';
+    navbar.style.backgroundColor = '#f4f4f4';
     localStorage.setItem('theme', 'dark');
   } else {
     themeToggle.innerText = 'Dark Mode';
-    navbarBrand.style.color = '#343a40';
+    navbarBrand.style.color = '#f4f4f4';
+    navbar.style.backgroundColor = '#343a40';
     localStorage.removeItem('theme');
   }
 }
