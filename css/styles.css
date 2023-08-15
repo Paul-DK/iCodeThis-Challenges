@@ -73,7 +73,7 @@ body {
 }
 
 /* Dark theme */
-body.dark .navbar .navbar-brand {
+body.dark {
   background-color: #343a40;
   color: #f4f4f4;
 }
@@ -83,7 +83,8 @@ body.dark .navbar {
 }
 
 body.dark .navbar a,
-body.dark .navbar button {
+body.dark .navbar button,
+body.dark .navbar .navbar-brand {
   color: #343a40;
 }
 
