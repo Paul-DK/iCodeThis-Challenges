@@ -95,11 +95,12 @@ body {
   padding: 30px 0;
   background-color: #343a40;
   color: #f4f4f4;
+  font-size: 1.2rem;
 }
 
 body.dark .footer {
   background-color: #f4f4f4;
-  color: #343a40;
+  color: #f4f4f4;
 }
 
 
