@@ -47,6 +47,8 @@ const projects = [
 
 const projectsDiv = document.getElementById('projects');
 
+const projectsDiv = document.getElementById('projects');
+
 projects.forEach((project) => {
   const projectDiv = document.createElement('div');
   projectDiv.className = 'col-md-4';
@@ -85,8 +87,6 @@ projects.forEach((project) => {
   imgDiv.appendChild(overlay);
   imgAndButtonDiv.appendChild(imgDiv);
 
-  card.appendChild(imgAndButtonDiv);
-
   const cardBody = document.createElement('div');
   cardBody.className = 'card-body';
 
@@ -95,36 +95,21 @@ projects.forEach((project) => {
   title.innerText = project.title;
   cardBody.appendChild(title);
 
-  const link = document.createElement('a');
-  link.className = 'btn btn-primary'; // Removed text-center
-  link.href = project.folder;
-  link.innerText = 'View Project';
-  // link.style.display = 'block';
-  // link.style.margin = '10px auto';
-  // link.style.width = 'fit-content';
-  cardBody.appendChild(link);
+  const button = document.createElement('a');
+  button.className = 'btn btn-primary';
+  button.href = project.folder;
+  button.innerText = 'View Project';
+  imgAndButtonDiv.appendChild(button);
 
+  cardBody.appendChild(imgAndButtonDiv);
   card.appendChild(cardBody);
   projectDiv.appendChild(card);
+
   projectsDiv.appendChild(projectDiv);
 });
 
-// Theme toggle
+// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
-
-function setToggleButtonText() {
-  if (document.body.classList.contains('dark')) {
-    themeToggle.innerText = 'Light Mode';
-    themeToggle.setAttribute('aria-label', 'Switch to light mode');
-  } else {
-    themeToggle.innerText = 'Dark Mode';
-    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-  }
-}
-
-setToggleButtonText();
-
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  setToggleButtonText();
 });
