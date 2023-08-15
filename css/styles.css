@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-  margin: 15px 0;
+  margin: 15px 7px;
 }
 
 .card img {
@@ -74,7 +74,7 @@ body {
 
 /* Dark theme */
 body.dark {
-  background-color: #343a40;
+  background-color: #2d3236;
   color: #f4f4f4;
 }
 
@@ -85,7 +85,7 @@ body.dark .navbar {
 body.dark .navbar a,
 body.dark .navbar button,
 body.dark .navbar .navbar-brand {
-  color: #343a40;
+  color: #f4f4f4;
 }
 
 body.dark .card {
