@@ -47,8 +47,6 @@ const projects = [
 
 const projectsDiv = document.getElementById('projects');
 
-const projectsDiv = document.getElementById('projects');
-
 projects.forEach((project) => {
   const projectDiv = document.createElement('div');
   projectDiv.className = 'col-md-4';
