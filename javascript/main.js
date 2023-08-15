@@ -47,62 +47,66 @@ const projects = [
 
 const projectsDiv = document.getElementById('projects');
 
-projects.forEach(project => {
-    const projectDiv = document.createElement('div');
-    projectDiv.className = 'col-md-4';
+projects.forEach((project) => {
+  const projectDiv = document.createElement('div');
+  projectDiv.className = 'col-md-4';
 
-    const card = document.createElement('div');
-    card.className = 'card';
+  const card = document.createElement('div');
+  card.className = 'card';
 
-    const imgLink = document.createElement('a');
-    imgLink.href = project.folder;
+  const imgLink = document.createElement('a');
+  imgLink.href = project.folder + '/index.html'; // Link to the index.html inside the project folder
 
-    const imgDiv = document.createElement('div');
-    imgDiv.className = 'project-image';
+  const imgDiv = document.createElement('div');
+  imgDiv.className = 'project-image';
 
-    const img = document.createElement('img');
-    img.className = 'card-img-top';
-    img.src = project.image;
-    img.alt = project.title;
+  const img = document.createElement('img');
+  img.className = 'card-img-top';
+  img.src = project.image;
+  img.alt = project.title;
 
-    const overlay = document.createElement('div');
-    overlay.className = 'project-overlay';
+  imgDiv.appendChild(img);
+  imgLink.appendChild(imgDiv);
+  card.appendChild(imgLink);
 
-    const description = document.createElement('p');
-    description.innerText = project.description;
-    overlay.appendChild(description);
+  const cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
 
-    const list = document.createElement('ul');
-    project.details.forEach(detail => {
-        const listItem = document.createElement('li');
-        listItem.innerText = detail;
-        list.appendChild(listItem);
-    });
-    overlay.appendChild(list);
+  const title = document.createElement('h5');
+  title.className = 'card-title';
+  title.innerText = project.title;
+  cardBody.appendChild(title);
 
-    img.appendChild(overlay);
-    imgDiv.appendChild(img);
-    imgLink.appendChild(imgDiv);
-    card.appendChild(imgLink);
+  const link = document.createElement('a');
+  link.className = 'btn btn-primary';
+  link.href = project.folder + '/index.html'; // Link to the index.html inside the project folder
+  link.innerText = 'View Project';
+  cardBody.appendChild(link);
 
-    const cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
+  card.appendChild(cardBody);
+  projectDiv.appendChild(card);
+  projectsDiv.appendChild(projectDiv);
 
-    const title = document.createElement('h5');
-    title.className = 'card-title';
-    title.innerText = project.title;
-    cardBody.appendChild(title);
+  const overlay = document.createElement('div');
+  overlay.className = 'project-overlay';
 
-    const link = document.createElement('a');
-    link.className = 'btn btn-primary';
-    link.href = project.folder;
-    link.innerText = 'View Project';
-    cardBody.appendChild(link);
+  const description = document.createElement('p');
+  description.innerText = project.description;
+  overlay.appendChild(description);
 
-    card.appendChild(cardBody);
-    projectDiv.appendChild(card);
-    projectsDiv.appendChild(projectDiv);
+  const list = document.createElement('ul');
+  project.details.forEach((detail) => {
+    const listItem = document.createElement('li');
+    listItem.innerText = detail;
+    list.appendChild(listItem);
+  });
+  overlay.appendChild(list);
+
+  imgDiv.appendChild(overlay); // Append overlay to imgDiv instead of the card
+  projectDiv.appendChild(card);
+  projectsDiv.appendChild(projectDiv);
 });
+
 
 // Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
