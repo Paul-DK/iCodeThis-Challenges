@@ -27,7 +27,7 @@ body {
 /* Image Container Styles */
 .project-image {
   position: relative;
-  overflow: hidden; /* To keep the scaled image within bounds */
+  /* overflow: hidden; To keep the scaled image within bounds */
 }
 
 .project-image img {

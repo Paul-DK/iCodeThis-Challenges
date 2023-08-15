@@ -45,32 +45,6 @@ const projects = [
     },
 ];
 
-// function createProjectCards() {
-//   const container = document.getElementById('projects');
-//   let content = '';
-//   projects.forEach((project) => {
-//     const card = `
-//       <div class="col-md-4">
-//     <div class="card">
-//       <div class="img-and-button">
-//         <div class="project-image">
-//           <img src="${project.image}" alt="${project.title}">
-//           <div class="project-overlay">
-//             <p>${project.description}</p>
-//             <ul>${project.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
-//           </div>
-//         </div>
-//         <h3>${project.title}</h3>
-//         <a href="${project.folder}" class="btn btn-primary">View Project</a>
-//       </div>
-//     </div>
-//   </div>
-//     `;
-//     content += card;
-//   });
-//   container.innerHTML = content;
-// }
-
 function createProjectCards() {
   const container = document.getElementById('projects');
   let content = '';
