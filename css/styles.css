@@ -52,13 +52,6 @@ body {
   transform: scale(1.05);
 }
 
-.btn-primary {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  transition: all 0.3s ease;
-}
-
 /* Dark theme */
 
 body.dark {
