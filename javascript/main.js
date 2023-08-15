@@ -96,9 +96,12 @@ projects.forEach((project) => {
   cardBody.appendChild(title);
 
   const link = document.createElement('a');
-  link.className = 'btn btn-primary';
+  link.className = 'btn btn-primary text-center';
   link.href = project.folder;
   link.innerText = 'View Project';
+  link.style.display = 'block';
+  link.style.margin = '10px auto';
+  link.style.width = 'fit-content'; // Ensure the button only takes the space it needs
   cardBody.appendChild(link); // Append the link inside the card body, after the title
 
   card.appendChild(cardBody);
