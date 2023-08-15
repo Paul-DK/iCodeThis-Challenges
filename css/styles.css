@@ -23,11 +23,8 @@ body {
 }
 
 .btn-primary {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
+  display: block;
+  margin: 10px auto;
 }
 
 /* Image Hover Effects */
