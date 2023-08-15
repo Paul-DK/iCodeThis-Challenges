@@ -102,7 +102,7 @@ projects.forEach((project) => {
   // link.style.display = 'block';
   // link.style.margin = '10px auto';
   // link.style.width = 'fit-content';
-  imgAndButtonDiv.appendChild(link);
+  cardBody.appendChild(link);
 
   card.appendChild(cardBody);
   projectDiv.appendChild(card);

@@ -29,27 +29,24 @@ body {
   transition: all 0.3s ease;
 }
 
-.img-and-button .project-image:hover,
-.img-and-button .btn-primary:hover {
+.img-and-button .project-image:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.img-and-button .project-image:hover img,
-.img-and-button .btn-primary:hover ~ .project-image img {
+.img-and-button .project-image:hover img {
   transform: scale(1.05);
 }
 
-.img-and-button .project-image:hover .project-overlay,
-.img-and-button .btn-primary:hover ~ .project-image .project-overlay {
+.img-and-button:hover .project-overlay {
   opacity: 1;
 }
 
 .btn-primary {
   display: block;
   margin: 10px auto;
-  width: fit-content; /* Ensuring the button only takes the space it needs */
-  transition: all 0.3s ease; /* Transition for smooth hover effect */
+  width: fit-content;
+  transition: all 0.3s ease;
 }
 
 /* Dark theme */
